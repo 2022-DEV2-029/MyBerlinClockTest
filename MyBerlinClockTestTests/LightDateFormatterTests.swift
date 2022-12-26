@@ -18,20 +18,20 @@ final class LightDateFormatterTests: XCTestCase {
 
         // odd
         
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 1)) == String.off)
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 3)) == String.off)
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 5)) == String.off)
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 7)) == String.off)
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 9)) == String.off)
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 1)) == String(Character.off))
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 3)) == String(Character.off))
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 5)) == String(Character.off))
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 7)) == String(Character.off))
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 9)) == String(Character.off))
 
         // even
         
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 0)) == String.yellow)
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 2)) == String.yellow)
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 4)) == String.yellow)
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 6)) == String.yellow)
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 8)) == String.yellow)
-        XCTAssert(formatter.seconds(from: Date.createWith(second: 10)) == String.yellow)
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 0)) == String(Character.yellow))
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 2)) == String(Character.yellow))
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 4)) == String(Character.yellow))
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 6)) == String(Character.yellow))
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 8)) == String(Character.yellow))
+        XCTAssert(formatter.seconds(from: Date.createWith(second: 10)) == String(Character.yellow))
     }
 
     // Five hours row

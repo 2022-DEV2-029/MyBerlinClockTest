@@ -47,18 +47,18 @@ public class LightDateFormatter: LightDateFormatterProtocol {
     // generate string
     
     private func stringForSecond(isOn: Bool) -> String {
-        isOn ? String.yellow : String.off
+        String(isOn ? Character.yellow : Character.off)
     }
 
     private func stringForHour(lightStates: [Bool]) -> String {
-        lightStates.map { $0 ? String.red : String.off }.joined()
+        lightStates.map { $0 ? Character.red : Character.off }.joined()
     }
 
     private func stringForMinutes(lightStates: [Bool], withVisualMarking: Bool = false) -> String {
 
         lightStates.enumerated().map { (index, element) in
-            let lightColor = (index + 1) % 3 == 0 && withVisualMarking ? String.red : String.yellow
-            return element ? lightColor : String.off
+            let lightColor = (index + 1) % 3 == 0 && withVisualMarking ? Character.red : Character.yellow
+            return element ? lightColor : Character.off
         }.joined()
     }
 }
