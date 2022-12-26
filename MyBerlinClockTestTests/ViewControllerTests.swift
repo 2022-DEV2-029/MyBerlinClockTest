@@ -13,6 +13,6 @@ final class ViewControllerTests: XCTestCase {
     func test_checkIfAllViewsArePresent() {
         let viewController = ViewController()
         
-        XCTAssert(viewController.allViews.count == 24)
+        XCTAssert(viewController.allLightViews.count == 24)
     }
 }

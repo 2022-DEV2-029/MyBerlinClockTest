@@ -31,11 +31,11 @@ public class ViewController: UIViewController {
         return label
     }()
     
-    lazy var allViews: [UIView] = [[secondsView],
-                                   rowFiveHoursViews,
-                                   rowOneHourViews,
-                                   rowFiveMinutesViews,
-                                   rowOneMinuteViews].flatMap { $0 }
+    lazy var allLightViews: [UIView] = [[secondsView],
+                                        rowFiveHoursViews,
+                                        rowOneHourViews,
+                                        rowFiveMinutesViews,
+                                        rowOneMinuteViews].flatMap { $0 }
     
     // Miscellaneous visuals
     
