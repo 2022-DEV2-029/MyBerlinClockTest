@@ -7,4 +7,7 @@
 
 public protocol ClockViewModelProtocol {
     var delegate: ClockViewDelegate? { get set }
+    
+    func startClock()
+    func stopClock()
 }

@@ -66,6 +66,20 @@ public class ClockViewController: UIViewController {
         setupViews()
     }
     
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        viewModel?.startClock()
+    }
+
+    public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        viewModel?.stopClock()
+    }
+
+    // UI setup
+    
     private func setupViews() {
         addMainStackView()
         addRowsInMainStackView()
