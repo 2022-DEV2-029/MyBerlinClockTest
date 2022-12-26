@@ -12,7 +12,8 @@
 		0C490A122959B209000217AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A112959B209000217AB /* ViewController.swift */; };
 		0C490A172959B20B000217AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C490A162959B20B000217AB /* Assets.xcassets */; };
 		0C490A1A2959B20B000217AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C490A182959B20B000217AB /* LaunchScreen.storyboard */; };
-		0C490A252959B20C000217AB /* MyBerlinClockTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A242959B20C000217AB /* MyBerlinClockTestTests.swift */; };
+		0C490A252959B20C000217AB /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A242959B20C000217AB /* ViewControllerTests.swift */; };
+		0C490A432959BA66000217AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A422959BA66000217AB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,8 @@
 		0C490A192959B20B000217AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C490A1B2959B20B000217AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C490A202959B20C000217AB /* MyBerlinClockTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBerlinClockTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C490A242959B20C000217AB /* MyBerlinClockTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBerlinClockTestTests.swift; sourceTree = "<group>"; };
+		0C490A242959B20C000217AB /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		0C490A422959BA66000217AB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		0C490A0C2959B209000217AB /* MyBerlinClockTest */ = {
 			isa = PBXGroup;
 			children = (
+				0C490A412959BA4F000217AB /* Utils */,
 				0C490A0D2959B209000217AB /* AppDelegate.swift */,
 				0C490A0F2959B209000217AB /* SceneDelegate.swift */,
 				0C490A112959B209000217AB /* ViewController.swift */,
@@ -89,9 +92,17 @@
 		0C490A232959B20C000217AB /* MyBerlinClockTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				0C490A242959B20C000217AB /* MyBerlinClockTestTests.swift */,
+				0C490A242959B20C000217AB /* ViewControllerTests.swift */,
 			);
 			path = MyBerlinClockTestTests;
+			sourceTree = "<group>";
+		};
+		0C490A412959BA4F000217AB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C490A422959BA66000217AB /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				0C490A122959B209000217AB /* ViewController.swift in Sources */,
 				0C490A0E2959B209000217AB /* AppDelegate.swift in Sources */,
 				0C490A102959B209000217AB /* SceneDelegate.swift in Sources */,
+				0C490A432959BA66000217AB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C490A252959B20C000217AB /* MyBerlinClockTestTests.swift in Sources */,
+				0C490A252959B20C000217AB /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
