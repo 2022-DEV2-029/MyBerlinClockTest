@@ -23,6 +23,10 @@
 		0C490A5A2959EECD000217AB /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A592959EECD000217AB /* Border.swift */; };
 		0C490A5C2959EEEF000217AB /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A5B2959EEEF000217AB /* UIView+extension.swift */; };
 		0C490A5E2959EF13000217AB /* UIStackView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A5D2959EF13000217AB /* UIStackView+extension.swift */; };
+		0C490A62295A2C20000217AB /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A61295A2C20000217AB /* Date+extension.swift */; };
+		0C490A65295A2E6C000217AB /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A64295A2E6C000217AB /* String+extension.swift */; };
+		0C490A68295A2EBB000217AB /* LightDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A67295A2EBB000217AB /* LightDateFormatter.swift */; };
+		0C490A6A295A2F28000217AB /* LightDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A69295A2F28000217AB /* LightDateFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		0C490A592959EECD000217AB /* Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
 		0C490A5B2959EEEF000217AB /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		0C490A5D2959EF13000217AB /* UIStackView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+extension.swift"; sourceTree = "<group>"; };
+		0C490A61295A2C20000217AB /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		0C490A64295A2E6C000217AB /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		0C490A67295A2EBB000217AB /* LightDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDateFormatter.swift; sourceTree = "<group>"; };
+		0C490A69295A2F28000217AB /* LightDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDateFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 		0C490A0C2959B209000217AB /* MyBerlinClockTest */ = {
 			isa = PBXGroup;
 			children = (
+				0C490A66295A2EAA000217AB /* Formatter */,
 				0C490A502959D298000217AB /* UseCase */,
 				0C490A442959CFED000217AB /* Modules */,
 				0C490A412959BA4F000217AB /* Utils */,
@@ -111,9 +120,11 @@
 		0C490A232959B20C000217AB /* MyBerlinClockTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				0C490A63295A2D7D000217AB /* Extensions */,
 				0C490A242959B20C000217AB /* ClockViewControllerTests.swift */,
 				0C490A4E2959D0F1000217AB /* ClockViewModelTests.swift */,
 				0C490A552959D32F000217AB /* LightStateUseCaseTests.swift */,
+				0C490A69295A2F28000217AB /* LightDateFormatterTests.swift */,
 			);
 			path = MyBerlinClockTestTests;
 			sourceTree = "<group>";
@@ -176,6 +187,7 @@
 				0C490A422959BA66000217AB /* Calendar+extension.swift */,
 				0C490A5B2959EEEF000217AB /* UIView+extension.swift */,
 				0C490A5D2959EF13000217AB /* UIStackView+extension.swift */,
+				0C490A64295A2E6C000217AB /* String+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +198,22 @@
 				0C490A592959EECD000217AB /* Border.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		0C490A63295A2D7D000217AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0C490A61295A2C20000217AB /* Date+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0C490A66295A2EAA000217AB /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				0C490A67295A2EBB000217AB /* LightDateFormatter.swift */,
+			);
+			path = Formatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,12 +321,15 @@
 				0C490A4D2959D0C2000217AB /* ClockViewModelProtocol.swift in Sources */,
 				0C490A5A2959EECD000217AB /* Border.swift in Sources */,
 				0C490A492959D03A000217AB /* ClockViewDelegate.swift in Sources */,
+				0C490A68295A2EBB000217AB /* LightDateFormatter.swift in Sources */,
 				0C490A122959B209000217AB /* ClockViewController.swift in Sources */,
 				0C490A0E2959B209000217AB /* AppDelegate.swift in Sources */,
+				0C490A62295A2C20000217AB /* Date+extension.swift in Sources */,
 				0C490A522959D2AB000217AB /* LightStateUseCase.swift in Sources */,
 				0C490A102959B209000217AB /* SceneDelegate.swift in Sources */,
 				0C490A432959BA66000217AB /* Calendar+extension.swift in Sources */,
 				0C490A4B2959D0A8000217AB /* ClockViewModel.swift in Sources */,
+				0C490A65295A2E6C000217AB /* String+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C490A252959B20C000217AB /* ClockViewControllerTests.swift in Sources */,
+				0C490A6A295A2F28000217AB /* LightDateFormatterTests.swift in Sources */,
 				0C490A562959D32F000217AB /* LightStateUseCaseTests.swift in Sources */,
 				0C490A4F2959D0F1000217AB /* ClockViewModelTests.swift in Sources */,
 			);
