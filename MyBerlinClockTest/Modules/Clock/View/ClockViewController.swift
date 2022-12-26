@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ClockViewController.swift
 //  MyBerlinClockTest
 //
 //  Created by 2022-DEV2-029 on 26/12/2022.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-public class ViewController: UIViewController {
+public class ClockViewController: UIViewController {
+    
+    // Views
     
     private lazy var secondsView: UIView = UIView.make(border: border)
     private lazy var secondsViewContainer: UIView = .init()
@@ -46,6 +48,15 @@ public class ViewController: UIViewController {
     private let spacingHorizontal: CGFloat = 8
     private let layoutMargins: UIEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
     
+    // ViewModel
+    
+    public var viewModel: ClockViewModelProtocol? {
+        didSet {
+            viewModel?.delegate = self
+        }
+    }
+    
+    // Functions
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,3 +128,6 @@ public class ViewController: UIViewController {
     }
 }
 
+extension ClockViewController: ClockViewDelegate {
+    
+}

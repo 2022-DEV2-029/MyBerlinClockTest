@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		0C490A0E2959B209000217AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A0D2959B209000217AB /* AppDelegate.swift */; };
 		0C490A102959B209000217AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A0F2959B209000217AB /* SceneDelegate.swift */; };
-		0C490A122959B209000217AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A112959B209000217AB /* ViewController.swift */; };
+		0C490A122959B209000217AB /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A112959B209000217AB /* ClockViewController.swift */; };
 		0C490A172959B20B000217AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C490A162959B20B000217AB /* Assets.xcassets */; };
 		0C490A1A2959B20B000217AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C490A182959B20B000217AB /* LaunchScreen.storyboard */; };
-		0C490A252959B20C000217AB /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A242959B20C000217AB /* ViewControllerTests.swift */; };
+		0C490A252959B20C000217AB /* ClockViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A242959B20C000217AB /* ClockViewControllerTests.swift */; };
 		0C490A432959BA66000217AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A422959BA66000217AB /* Extensions.swift */; };
+		0C490A492959D03A000217AB /* ClockViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A482959D03A000217AB /* ClockViewDelegate.swift */; };
+		0C490A4B2959D0A8000217AB /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A4A2959D0A8000217AB /* ClockViewModel.swift */; };
+		0C490A4D2959D0C2000217AB /* ClockViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A4C2959D0C2000217AB /* ClockViewModelProtocol.swift */; };
+		0C490A4F2959D0F1000217AB /* ClockViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A4E2959D0F1000217AB /* ClockViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +34,17 @@
 		0C490A0A2959B209000217AB /* MyBerlinClockTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBerlinClockTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C490A0D2959B209000217AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C490A0F2959B209000217AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0C490A112959B209000217AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C490A112959B209000217AB /* ClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
 		0C490A162959B20B000217AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C490A192959B20B000217AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C490A1B2959B20B000217AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C490A202959B20C000217AB /* MyBerlinClockTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBerlinClockTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C490A242959B20C000217AB /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		0C490A242959B20C000217AB /* ClockViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewControllerTests.swift; sourceTree = "<group>"; };
 		0C490A422959BA66000217AB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0C490A482959D03A000217AB /* ClockViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewDelegate.swift; sourceTree = "<group>"; };
+		0C490A4A2959D0A8000217AB /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
+		0C490A4C2959D0C2000217AB /* ClockViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModelProtocol.swift; sourceTree = "<group>"; };
+		0C490A4E2959D0F1000217AB /* ClockViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +86,10 @@
 		0C490A0C2959B209000217AB /* MyBerlinClockTest */ = {
 			isa = PBXGroup;
 			children = (
+				0C490A442959CFED000217AB /* Modules */,
 				0C490A412959BA4F000217AB /* Utils */,
 				0C490A0D2959B209000217AB /* AppDelegate.swift */,
 				0C490A0F2959B209000217AB /* SceneDelegate.swift */,
-				0C490A112959B209000217AB /* ViewController.swift */,
 				0C490A162959B20B000217AB /* Assets.xcassets */,
 				0C490A182959B20B000217AB /* LaunchScreen.storyboard */,
 				0C490A1B2959B20B000217AB /* Info.plist */,
@@ -92,7 +100,8 @@
 		0C490A232959B20C000217AB /* MyBerlinClockTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				0C490A242959B20C000217AB /* ViewControllerTests.swift */,
+				0C490A242959B20C000217AB /* ClockViewControllerTests.swift */,
+				0C490A4E2959D0F1000217AB /* ClockViewModelTests.swift */,
 			);
 			path = MyBerlinClockTestTests;
 			sourceTree = "<group>";
@@ -103,6 +112,41 @@
 				0C490A422959BA66000217AB /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		0C490A442959CFED000217AB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0C490A452959CFF6000217AB /* Clock */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		0C490A452959CFF6000217AB /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				0C490A472959D018000217AB /* ViewModel */,
+				0C490A462959D011000217AB /* View */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		0C490A462959D011000217AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C490A112959B209000217AB /* ClockViewController.swift */,
+				0C490A482959D03A000217AB /* ClockViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C490A472959D018000217AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C490A4A2959D0A8000217AB /* ClockViewModel.swift */,
+				0C490A4C2959D0C2000217AB /* ClockViewModelProtocol.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,10 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C490A122959B209000217AB /* ViewController.swift in Sources */,
+				0C490A4D2959D0C2000217AB /* ClockViewModelProtocol.swift in Sources */,
+				0C490A492959D03A000217AB /* ClockViewDelegate.swift in Sources */,
+				0C490A122959B209000217AB /* ClockViewController.swift in Sources */,
 				0C490A0E2959B209000217AB /* AppDelegate.swift in Sources */,
 				0C490A102959B209000217AB /* SceneDelegate.swift in Sources */,
 				0C490A432959BA66000217AB /* Extensions.swift in Sources */,
+				0C490A4B2959D0A8000217AB /* ClockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C490A252959B20C000217AB /* ViewControllerTests.swift in Sources */,
+				0C490A252959B20C000217AB /* ClockViewControllerTests.swift in Sources */,
+				0C490A4F2959D0F1000217AB /* ClockViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

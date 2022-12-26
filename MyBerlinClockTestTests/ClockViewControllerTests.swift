@@ -1,5 +1,5 @@
 //
-//  ViewControllerTests.swift
+//  ClockViewControllerTests.swift
 //  MyBerlinClockTestTests
 //
 //  Created by 2022-DEV2-029 on 26/12/2022.
@@ -8,11 +8,11 @@
 import XCTest
 @testable import MyBerlinClockTest
 
-final class ViewControllerTests: XCTestCase {
+final class ClockViewControllerTests: XCTestCase {
 
     func test_checkIfAllViewsArePresent() {
-        let viewController = ViewController()
+        let vc = ClockViewController()
         
-        XCTAssert(viewController.allLightViews.count == 24)
+        XCTAssert(vc.allLightViews.count == 24)
     }
 }
