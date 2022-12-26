@@ -63,3 +63,17 @@ public extension UIStackView {
         return view
     }
 }
+
+public extension Calendar {
+    func seconds(of date: Date) -> Int {
+        component(.second, from: date)
+    }
+
+    func minutes(of date: Date) -> Int {
+        component(.minute, from: date)
+    }
+
+    func hours(of date: Date) -> Int {
+        component(.hour, from: date)
+    }
+}
