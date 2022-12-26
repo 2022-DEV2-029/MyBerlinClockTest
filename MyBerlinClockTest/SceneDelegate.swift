@@ -22,7 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
 
         let vc = ClockViewController()
-        vc.viewModel = ClockViewModel()
+        let useCase: LightStateUseCaseProtocol = LightStateUseCase()
+        let formatter: LightDateFormatterProtocol = LightDateFormatter(useCase: useCase)
+        vc.viewModel = ClockViewModel(formatter: formatter)
         
         window?.rootViewController = vc
         window?.makeKeyAndVisible()

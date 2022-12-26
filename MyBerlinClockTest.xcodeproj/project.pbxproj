@@ -27,6 +27,8 @@
 		0C490A65295A2E6C000217AB /* Character+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A64295A2E6C000217AB /* Character+extension.swift */; };
 		0C490A68295A2EBB000217AB /* LightDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A67295A2EBB000217AB /* LightDateFormatter.swift */; };
 		0C490A6A295A2F28000217AB /* LightDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A69295A2F28000217AB /* LightDateFormatterTests.swift */; };
+		0C490A6C295A452D000217AB /* DateFormatter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A6B295A452D000217AB /* DateFormatter+extension.swift */; };
+		0C490A6F295A460E000217AB /* MockClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C490A6E295A460E000217AB /* MockClockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		0C490A64295A2E6C000217AB /* Character+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+extension.swift"; sourceTree = "<group>"; };
 		0C490A67295A2EBB000217AB /* LightDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDateFormatter.swift; sourceTree = "<group>"; };
 		0C490A69295A2F28000217AB /* LightDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDateFormatterTests.swift; sourceTree = "<group>"; };
+		0C490A6B295A452D000217AB /* DateFormatter+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+extension.swift"; sourceTree = "<group>"; };
+		0C490A6E295A460E000217AB /* MockClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		0C490A232959B20C000217AB /* MyBerlinClockTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				0C490A6D295A45FB000217AB /* Mock */,
 				0C490A63295A2D7D000217AB /* Extensions */,
 				0C490A242959B20C000217AB /* ClockViewControllerTests.swift */,
 				0C490A4E2959D0F1000217AB /* ClockViewModelTests.swift */,
@@ -188,6 +193,7 @@
 				0C490A5B2959EEEF000217AB /* UIView+extension.swift */,
 				0C490A5D2959EF13000217AB /* UIStackView+extension.swift */,
 				0C490A64295A2E6C000217AB /* Character+extension.swift */,
+				0C490A6B295A452D000217AB /* DateFormatter+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +220,14 @@
 				0C490A67295A2EBB000217AB /* LightDateFormatter.swift */,
 			);
 			path = Formatter;
+			sourceTree = "<group>";
+		};
+		0C490A6D295A45FB000217AB /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0C490A6E295A460E000217AB /* MockClockViewController.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +337,7 @@
 				0C490A492959D03A000217AB /* ClockViewDelegate.swift in Sources */,
 				0C490A68295A2EBB000217AB /* LightDateFormatter.swift in Sources */,
 				0C490A122959B209000217AB /* ClockViewController.swift in Sources */,
+				0C490A6C295A452D000217AB /* DateFormatter+extension.swift in Sources */,
 				0C490A0E2959B209000217AB /* AppDelegate.swift in Sources */,
 				0C490A62295A2C20000217AB /* Date+extension.swift in Sources */,
 				0C490A522959D2AB000217AB /* LightStateUseCase.swift in Sources */,
@@ -341,6 +356,7 @@
 				0C490A6A295A2F28000217AB /* LightDateFormatterTests.swift in Sources */,
 				0C490A562959D32F000217AB /* LightStateUseCaseTests.swift in Sources */,
 				0C490A4F2959D0F1000217AB /* ClockViewModelTests.swift in Sources */,
+				0C490A6F295A460E000217AB /* MockClockViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

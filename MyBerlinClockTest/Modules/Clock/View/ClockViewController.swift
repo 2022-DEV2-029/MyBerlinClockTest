@@ -13,7 +13,7 @@ public class ClockViewController: UIViewController {
     
     private lazy var secondsView: UIView = UIView.make(border: border)
     private lazy var secondsViewContainer: UIView = .init()
-
+    
     private lazy var rowFiveHoursViews: [UIView] = generateViews(number: 4)
     private lazy var rowOneHourViews: [UIView] = generateViews(number: 4)
     private lazy var rowFiveMinutesViews: [UIView] = generateViews(number: 11)
@@ -26,9 +26,9 @@ public class ClockViewController: UIViewController {
     private lazy var fiveMinutesStackView: UIStackView = .init(axis: .horizontal, distribution: .fillEqually, spacing: spacingHorizontal)
     private lazy var oneMinuteStackView: UIStackView = .init(axis: .horizontal, distribution: .fillEqually, spacing: spacingHorizontal)
     
-    private lazy var hourLabel: UILabel = {
+    private lazy var clockLabel: UILabel = {
         let label: UILabel = .init()
-        label.text = "18:35"
+        label.text = "--:--:--"
         label.textAlignment = .center
         return label
     }()
@@ -57,7 +57,7 @@ public class ClockViewController: UIViewController {
     }
     
     // Functions
-
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,16 +68,16 @@ public class ClockViewController: UIViewController {
     
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        
         viewModel?.startClock()
     }
-
+    
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-
+        
         viewModel?.stopClock()
     }
-
+    
     // UI setup
     
     private func setupViews() {
@@ -98,7 +98,7 @@ public class ClockViewController: UIViewController {
                                                    oneHourStackView,
                                                    fiveMinutesStackView,
                                                    oneMinuteStackView,
-                                                   hourLabel])
+                                                   clockLabel])
     }
     
     private func addRowsInMainStackView() {
@@ -143,5 +143,12 @@ public class ClockViewController: UIViewController {
 }
 
 extension ClockViewController: ClockViewDelegate {
+    public func refreshClockViews(with colors: [UIColor]) {
+        zip(allLightViews, colors).forEach { $0.0.backgroundColor = $0.1 }
+    }
     
+    
+    public func refreshClockLabel(with text: String) {
+        clockLabel.text = text
+    }
 }
