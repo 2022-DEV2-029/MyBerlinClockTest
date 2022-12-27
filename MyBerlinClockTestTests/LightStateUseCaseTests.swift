@@ -19,20 +19,20 @@ final class LightStateUseCaseTests: XCTestCase {
 
         // odd
         
-        XCTAssertFalse(useCase.secondState(with: Date.createWith(second: 1)))
-        XCTAssertFalse(useCase.secondState(with: Date.createWith(second: 3)))
-        XCTAssertFalse(useCase.secondState(with: Date.createWith(second: 5)))
-        XCTAssertFalse(useCase.secondState(with: Date.createWith(second: 7)))
-        XCTAssertFalse(useCase.secondState(with: Date.createWith(second: 9)))
+        XCTAssertFalse(useCase.secondState(from: Date.createWith(second: 1)))
+        XCTAssertFalse(useCase.secondState(from: Date.createWith(second: 3)))
+        XCTAssertFalse(useCase.secondState(from: Date.createWith(second: 5)))
+        XCTAssertFalse(useCase.secondState(from: Date.createWith(second: 7)))
+        XCTAssertFalse(useCase.secondState(from: Date.createWith(second: 9)))
 
         // even
         
-        XCTAssertTrue(useCase.secondState(with: Date.createWith(second: 0)))
-        XCTAssertTrue(useCase.secondState(with: Date.createWith(second: 2)))
-        XCTAssertTrue(useCase.secondState(with: Date.createWith(second: 4)))
-        XCTAssertTrue(useCase.secondState(with: Date.createWith(second: 6)))
-        XCTAssertTrue(useCase.secondState(with: Date.createWith(second: 8)))
-        XCTAssertTrue(useCase.secondState(with: Date.createWith(second: 10)))
+        XCTAssertTrue(useCase.secondState(from: Date.createWith(second: 0)))
+        XCTAssertTrue(useCase.secondState(from: Date.createWith(second: 2)))
+        XCTAssertTrue(useCase.secondState(from: Date.createWith(second: 4)))
+        XCTAssertTrue(useCase.secondState(from: Date.createWith(second: 6)))
+        XCTAssertTrue(useCase.secondState(from: Date.createWith(second: 8)))
+        XCTAssertTrue(useCase.secondState(from: Date.createWith(second: 10)))
     }
 
     // Five hours row
@@ -46,7 +46,7 @@ final class LightStateUseCaseTests: XCTestCase {
     }
 
     func checkFiveHoursSatisfy(with hours: ClosedRange<Int>, expectedResult: [Bool]) {
-        let results = hours.map { useCase.fiveHoursRowStates(with: Date.createWith(hour: $0)) }
+        let results = hours.map { useCase.fiveHoursRowStates(from: Date.createWith(hour: $0)) }
         XCTAssert(results.allSatisfy { $0 == expectedResult })
     }
 
@@ -61,7 +61,7 @@ final class LightStateUseCaseTests: XCTestCase {
     }
 
     func checkOneHourSatisfy(with hours: [Int], expectedResult: [Bool]) {
-        let results = hours.map { useCase.oneHourRowStates(with: Date.createWith(hour: $0)) }
+        let results = hours.map { useCase.oneHourRowStates(from: Date.createWith(hour: $0)) }
         XCTAssert(results.allSatisfy { $0 == expectedResult })
     }
 
@@ -83,7 +83,7 @@ final class LightStateUseCaseTests: XCTestCase {
     }
 
     func checkFiveMinutesSatisfy(with minutes: ClosedRange<Int>, expectedResult: [Bool]) {
-        let results = minutes.map { useCase.fiveMinutesRowStates(with: Date.createWith(minute: $0)) }
+        let results = minutes.map { useCase.fiveMinutesRowStates(from: Date.createWith(minute: $0)) }
 
         XCTAssert(results.allSatisfy { $0 == expectedResult })
     }
@@ -109,7 +109,7 @@ final class LightStateUseCaseTests: XCTestCase {
     }
 
     func checkOneMinuteSatisfy(with minutes: [Int], expectedResult: [Bool]) {
-        let results = minutes.map { useCase.oneMinuteRowStates(with: Date.createWith(minute: $0)) }
+        let results = minutes.map { useCase.oneMinuteRowStates(from: Date.createWith(minute: $0)) }
 
         XCTAssert(results.allSatisfy { $0 == expectedResult })
     }

@@ -7,6 +7,10 @@
 
 import Foundation
 
+/**
+ This Formatter will return the formatted string for each row thanks to a date.
+ Each character represent a color that will be displayed on the different lights.
+ */
 public protocol LightDateFormatterProtocol {
     func seconds(from date: Date) -> String
     func fiveHoursRow(from date: Date) -> String
@@ -24,24 +28,24 @@ public class LightDateFormatter: LightDateFormatterProtocol {
     }
 
     public func seconds(from date: Date) -> String {
-        stringForSecond(isOn: useCase.secondState(with: date))
+        stringForSecond(isOn: useCase.secondState(from: date))
     }
 
     public func fiveHoursRow(from date: Date) -> String {
-        stringForHour(lightStates: useCase.fiveHoursRowStates(with: date))
+        stringForHour(lightStates: useCase.fiveHoursRowStates(from: date))
     }
 
     public func oneHourRow(from date: Date) -> String {
-        stringForHour(lightStates: useCase.oneHourRowStates(with: date))
+        stringForHour(lightStates: useCase.oneHourRowStates(from: date))
     }
 
     public func fiveMinutesRow(from date: Date) -> String {
-        stringForMinutes(lightStates: useCase.fiveMinutesRowStates(with: date),
+        stringForMinutes(lightStates: useCase.fiveMinutesRowStates(from: date),
                          withVisualMarking: true)
     }
 
     public func oneMinuteRow(from date: Date) -> String {
-        stringForMinutes(lightStates: useCase.oneMinuteRowStates(with: date))
+        stringForMinutes(lightStates: useCase.oneMinuteRowStates(from: date))
     }
 
     // generate string
@@ -57,8 +61,8 @@ public class LightDateFormatter: LightDateFormatterProtocol {
     private func stringForMinutes(lightStates: [Bool], withVisualMarking: Bool = false) -> String {
 
         lightStates.enumerated().map { (index, element) in
-            let lightColor = (index + 1) % 3 == 0 && withVisualMarking ? Character.red : Character.yellow
-            return element ? lightColor : Character.off
+            let lightColorOn = (index + 1) % 3 == 0 && withVisualMarking ? Character.red : Character.yellow
+            return element ? lightColorOn : Character.off
         }.joined()
     }
 }

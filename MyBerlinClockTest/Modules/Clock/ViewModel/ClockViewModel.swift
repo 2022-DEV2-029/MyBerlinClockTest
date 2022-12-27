@@ -32,11 +32,11 @@ public class ClockViewModel: ClockViewModelProtocol {
     }
     
     public func updateClock(with date: Date) {
-        delegate?.refreshClockViews(with: allStatesString(with: date).map(mapColor))
+        delegate?.refreshClockViews(with: allLightsString(from: date).map(mapColor))
         delegate?.refreshClockLabel(with: DateFormatter.hoursMinutesSecondsFormatter.string(from: date))
     }
     
-    private func allStatesString(with date: Date) -> String {
+    private func allLightsString(from date: Date) -> String {
         [formatter.seconds(from: date),
          formatter.fiveHoursRow(from: date),
          formatter.oneHourRow(from: date),

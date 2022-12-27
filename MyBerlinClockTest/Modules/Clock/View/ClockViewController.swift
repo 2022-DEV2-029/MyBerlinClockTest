@@ -147,7 +147,6 @@ extension ClockViewController: ClockViewDelegate {
         zip(allLightViews, colors).forEach { $0.0.backgroundColor = $0.1 }
     }
     
-    
     public func refreshClockLabel(with text: String) {
         clockLabel.text = text
     }
